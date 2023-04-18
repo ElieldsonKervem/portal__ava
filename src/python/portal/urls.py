@@ -33,6 +33,8 @@ else:
         re_path("media/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT}),
         re_path("static/(?P<path>.*)$", serve, {"document_root": settings.STATIC_ROOT}),
     ]
+print(urlpatterns)
+print('settings.DEBUG:', settings.DEBUG)
 
 if settings.DEBUG:
     import debug_toolbar

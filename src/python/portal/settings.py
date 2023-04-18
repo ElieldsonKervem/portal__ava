@@ -65,7 +65,7 @@ DJANGO_APPS = env_as_list('DJANGO_APPS', [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'a4',
-])
+]) 
 INSTALLED_APPS = MY_APPS + THIRD_APPS + DJANGO_APPS
 
 # Middleware
@@ -235,6 +235,7 @@ SUAP_PORTAL_FAKEUSER = env('SUAP_PORTAL_FAKEUSER', None)
 CORS_ORIGIN_ALLOW_ALL =  env_as_bool('DJANGO_CORS_ORIGIN_ALLOW_ALL', False) 
 CORS_ALLOWED_ORIGINS = env_as_list('DJANGO_CORS_ALLOWED_ORIGINS', [SUAP_BASE_URL])
 CSRF_TRUSTED_ORIGINS = env_as_list('DJANGO_CSRF_TRUSTED_ORIGINS', [])
+print(CSRF_TRUSTED_ORIGINS)
 
 LAST_STARTUP = int(datetime.timestamp(datetime.now())*1000)
 
